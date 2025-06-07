@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         className="p-6 bg-white text-[#0a1e3a] rounded shadow-lg"
                     >
-                        <p className="italic mb-4">"{t.text}"</p>
+                        <p className="italic mb-4">{t.text}</p>
                         <h4 className="font-bold">{t.name}</h4>
                     </motion.div>
                 ))}

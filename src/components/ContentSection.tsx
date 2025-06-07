@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -37,7 +38,6 @@ export default function ContentSection({
                     <p className="text-lg text-gray-300">{description}</p>
                 </motion.div>
 
-
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -61,15 +61,19 @@ export default function ContentSection({
                             slideShadows: false,
                         }}
                         pagination={{ clickable: true }}
-                        className="rounded-lg shadow-lg w-[600px] h-[600px] "
+                        className="rounded-lg shadow-lg w-[600px] h-[600px]"
                     >
                         {images.map((imgUrl, index) => (
                             <SwiperSlide key={index}>
-                                <img
-                                    src={imgUrl}
-                                    alt={`Image ${index + 1}`}
-                                    className="w-full h-full object-cover rounded-lg  border-[3px] border-[#C9A14D] p-4"
-                                />
+                                <div className="relative w-full h-full rounded-lg border-[3px] border-[#C9A14D] p-4">
+                                    <Image
+                                        src={imgUrl}
+                                        alt={`Image ${index + 1}`}
+                                        fill
+                                        className="object-cover rounded-lg"
+                                        sizes="(max-width: 768px) 100vw, 600px"
+                                    />
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
