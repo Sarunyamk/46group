@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="py-20 px-20 bg-black/70 text-white text-center">
+        <section id="contact" className="py-20 px-20 bg-luxury-gradient text-white text-center">
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}

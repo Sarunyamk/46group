@@ -120,3 +120,35 @@
     @apply bg-background text-foreground;
   }
 }
+@layer utilities {
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-luxury-gradient {
+    background: linear-gradient(135deg, #000000 0%, #0a1a2f 100%);
+  }
+  .bg-card-luxury {
+    background: linear-gradient(
+      135deg,
+      rgba(10, 26, 47, 0.8) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    backdrop-filter: blur(10px);
+  }
+  .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #c9a14d !important;
+  }
+}

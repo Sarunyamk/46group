@@ -1,6 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
 import PropertyCard from './PropertyCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const PropertiesSection = () => {
     const properties = [
@@ -20,11 +24,25 @@ const PropertiesSection = () => {
         },
         {
             image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            title: 'Malibu Oceanfront',
+            title: 'Lad prao Beach House',
             location: 'Malibu, CA',
             price: '$25,000,000',
             type: 'Oceanfront'
-        }
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1501183638710-841dd1904471?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9tZXxlbnwwfHwwfHx8MA%3D%3D',
+            title: 'Oceanfront Villa',
+            location: 'Malibu, CA',
+            price: '$25,000,000',
+            type: 'Oceanfront'
+        },
+        {
+            image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvbWV8ZW58MHx8MHx8fDA%3D0',
+            title: 'Luxury Mountain Retreat',
+            location: 'Malibu, CA',
+            price: '$25,000,000',
+            type: 'Oceanfront'
+        },
     ];
 
     return (
@@ -38,7 +56,7 @@ const PropertiesSection = () => {
                     viewport={{ once: true }}
                 >
                     <motion.h2
-                        className="font-playfair text-4xl md:text-6xl font-bold text-white mb-6"
+                        className="text-4xl md:text-6xl font-bold text-white mb-6"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.8 }}
@@ -48,7 +66,7 @@ const PropertiesSection = () => {
                     </motion.h2>
 
                     <motion.div
-                        className="w-24 h-1 bg-luxury-gold mx-auto mb-8"
+                        className="w-24 h-1 bg-[#C9A14D] mx-auto mb-8"
                         initial={{ width: 0 }}
                         whileInView={{ width: 96 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
@@ -67,21 +85,42 @@ const PropertiesSection = () => {
                     </motion.p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <Swiper
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    slidesPerGroup={1}
+                    loop={true}
+                    breakpoints={{
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 },
+                    }}
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Autoplay, Pagination]}
+                    className="!pb-12"
+                >
+
                     {properties.map((property, index) => (
-                        <PropertyCard key={index} {...property} index={index} />
+                        <SwiperSlide key={index}>
+                            <PropertyCard {...property} index={index} />
+                        </SwiperSlide>
                     ))}
-                </div>
+                </Swiper>
 
                 <motion.div
-                    className="text-center mt-16"
+                    className="text-center mt-16 "
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8, duration: 0.8 }}
                     viewport={{ once: true }}
                 >
                     <motion.button
-                        className="border-2 border-luxury-gold text-luxury-gold px-8 py-4 font-semibold tracking-wider uppercase hover:bg-luxury-gold hover:text-black transition-all duration-300"
+                        className="border-2 border-[#C9A14D] text-[#C9A14D] px-8 py-4 font-semibold tracking-wider uppercase hover:bg-[#C9A14D] hover:text-black transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >

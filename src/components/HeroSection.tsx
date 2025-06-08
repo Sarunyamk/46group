@@ -2,18 +2,8 @@
 import { motion } from 'framer-motion';
 export default function HeroSection() {
     return (
-        // <section className="relative h-screen flex items-center justify-center overflow-hidden text-center text-white">
-        //     <video
-        //         className="absolute top-0 left-0 w-full h-full object-cover"
-        //         src="/videos/example1.mp4"
-        //         autoPlay
-        //         muted
-        //         loop
-        //     />
 
-        // </section>
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Background Image with Parallax Effect */}
             <motion.div
                 className="absolute inset-0 z-0"
                 style={{
@@ -27,10 +17,8 @@ export default function HeroSection() {
                 transition={{ duration: 1.5 }}
             />
 
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/50 z-10" />
 
-            {/* Content */}
             <div className="relative z-20 text-center px-4 max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -38,16 +26,16 @@ export default function HeroSection() {
                     transition={{ delay: 0.5, duration: 0.8 }}
                 >
                     <motion.h1
-                        className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
+                        className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7, duration: 0.8 }}
                     >
-                        Luxury Real Estate
+                        Forty-Six Real Estate
                     </motion.h1>
 
                     <motion.div
-                        className="w-24 h-1 bg-luxury-gold mx-auto mb-8"
+                        className="w-24 h-1 bg-[#C9A14D] mx-auto mb-8"
                         initial={{ width: 0 }}
                         animate={{ width: 96 }}
                         transition={{ delay: 1.2, duration: 0.8 }}
@@ -70,7 +58,7 @@ export default function HeroSection() {
                         transition={{ delay: 1.4, duration: 0.8 }}
                     >
                         <motion.button
-                            className="bg-luxury-gold text-black px-8 py-4 font-semibold tracking-wider uppercase hover:bg-yellow-400 transition-colors duration-300"
+                            className="bg-[#C9A14D] text-black px-8 py-4 font-semibold tracking-wider uppercase hover:bg-yellow-400 transition-colors duration-300"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -78,7 +66,7 @@ export default function HeroSection() {
                         </motion.button>
 
                         <motion.button
-                            className="border-2 border-luxury-gold text-luxury-gold px-8 py-4 font-semibold tracking-wider uppercase hover:bg-luxury-gold hover:text-black transition-all duration-300"
+                            className="border-2 border-[#C9A14D] text-[#C9A14D] px-8 py-4 font-semibold tracking-wider uppercase hover:bg-[#C9A14D] hover:text-black transition-all duration-300"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -88,7 +76,6 @@ export default function HeroSection() {
                 </motion.div>
             </div>
 
-            {/* Animated Scroll Indicator */}
             <motion.div
                 className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
                 initial={{ opacity: 0, y: 20 }}
@@ -101,7 +88,7 @@ export default function HeroSection() {
                     transition={{ duration: 2, repeat: Infinity }}
                 >
                     <motion.div
-                        className="w-1 h-3 bg-luxury-gold rounded-full mt-2"
+                        className="w-1 h-3 bg-[#C9A14D] rounded-full mt-2"
                         animate={{ y: [0, 12, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
                     />

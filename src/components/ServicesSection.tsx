@@ -9,7 +9,7 @@ const services = [
 
 export default function ServicesSection() {
     return (
-        <section id="services" className="py-20 px-6 md:px-32 bg-black/70 text-white text-center">
+        <section id="services" className="py-20 px-6 md:px-32 bg-luxury-gradient text-white text-center">
             <motion.h2
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
