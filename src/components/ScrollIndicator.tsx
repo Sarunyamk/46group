@@ -2,10 +2,10 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
+const sections = ['home', 'services', 'properties', 'about', 'contact'];
 const ScrollIndicator = () => {
     const [activeSection, setActiveSection] = useState(0);
 
-    const sections = ['home', 'services', 'properties', 'about', 'contact'];
 
     useEffect(() => {
         const handleScroll = () => {

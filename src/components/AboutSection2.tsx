@@ -77,7 +77,7 @@ const AboutSection2 = () => {
                             viewport={{ once: true }}
                         >
                             For over two decades, we have been the trusted name in luxury real estate,
-                            representing the world's most discerning buyers and sellers. Our commitment
+                            representing the world most discerning buyers and sellers. Our commitment
                             to excellence has earned us recognition as leaders in the industry.
                         </motion.p>
 
