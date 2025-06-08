@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-
+import Image from 'next/image';
 const AboutSection2 = () => {
     return (
         <section id="about2" className="py-24 px-4 bg-luxury-gradient">
@@ -15,15 +15,17 @@ const AboutSection2 = () => {
                         viewport={{ once: true }}
                         className="relative"
                     >
+
                         <motion.div
-                            className="relative overflow-hidden rounded-lg"
+                            className="relative overflow-hidden rounded-lg h-[600px]"
                             whileHover={{ scale: 1.02 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <img
+                            <Image
                                 src="https://media.istockphoto.com/id/2112749005/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%82%E0%B8%99%E0%B8%B2%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%AA%E0%B9%84%E0%B8%95%E0%B8%A5%E0%B9%8C%E0%B8%A3%E0%B9%88%E0%B8%A7%E0%B8%A1%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%97%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7%E0%B8%8A%E0%B8%AD%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%A0%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%9C%E0%B8%A5-3.jpg?s=612x612&w=0&k=20&c=3tKkbOTLg-hgOycAbz4QdtqclqET3z2ywbgmPCjkxPE="
-                                alt="Luxury Interior"
-                                className="w-full h-[600px] object-cover"
+                                alt="Luxury Interior1"
+                                fill
+                                className="object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                         </motion.div>
@@ -86,9 +88,9 @@ const AboutSection2 = () => {
                             transition={{ delay: 0.8, duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            We don't just sell properties; we curate extraordinary experiences.
+                            {`We don't just sell properties; we curate extraordinary experiences.
                             Every transaction is handled with the utmost care, discretion, and professionalism
-                            that our clientele deserves.
+                            that our clientele deserves.`}
                         </motion.p>
 
                         <motion.div

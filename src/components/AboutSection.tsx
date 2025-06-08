@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const AboutSection = () => {
     return (
@@ -49,9 +50,9 @@ const AboutSection = () => {
                             transition={{ delay: 0.8, duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            We don't just sell properties; we curate extraordinary experiences.
+                            {`We don't just sell properties; we curate extraordinary experiences.
                             Every transaction is handled with the utmost care, discretion, and professionalism
-                            that our clientele deserves.
+                            that our clientele deserves.`}
                         </motion.p>
 
                         <motion.div
@@ -79,15 +80,17 @@ const AboutSection = () => {
                         viewport={{ once: true }}
                         className="relative"
                     >
+
                         <motion.div
-                            className="relative overflow-hidden rounded-lg"
+                            className="relative overflow-hidden rounded-lg h-[600px]"
                             whileHover={{ scale: 1.02 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1600047509782-20d39509f26d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                 alt="Luxury Interior"
-                                className="w-full h-[600px] object-cover"
+                                fill
+                                className="object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                         </motion.div>
