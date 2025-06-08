@@ -88,9 +88,9 @@ const AboutSection2 = () => {
                             transition={{ delay: 0.8, duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            {`We don't just sell properties; we curate extraordinary experiences.
+                            We curate extraordinary experiences.
                             Every transaction is handled with the utmost care, discretion, and professionalism
-                            that our clientele deserves.`}
+                            that our clientele deserves.
                         </motion.p>
 
                         <motion.div

@@ -80,8 +80,8 @@ const PropertiesSection = () => {
                         transition={{ delay: 0.6, duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        {`Explore our curated selection of the world's most prestigious properties,
-    each offering unparalleled luxury and sophistication.`}
+                        Explore our curated selection of the world most prestigious properties,
+                        each offering unparalleled luxury and sophistication.
                     </motion.p>
                 </motion.div>
 
